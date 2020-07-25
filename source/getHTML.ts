@@ -1,4 +1,4 @@
-import exists from "./fileExists.ts";
+import exists from "./exists.ts";
 
 interface StringDict {
     [Key: string]: string;
