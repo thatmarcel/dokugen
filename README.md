@@ -1,5 +1,5 @@
 # dokugen
-**Easy and fast API documentation server written in [Deno](https://deno.land)**
+**Easy and fast API documentation website generator & server written in [Deno](https://deno.land)**
 
 ## Running
 1. Install Deno ([instructions](https://deno.land))
