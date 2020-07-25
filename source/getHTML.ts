@@ -1,4 +1,4 @@
-import { exists } from "https://deno.land/std/fs/mod.ts";
+import exists from "./fileExists.ts";
 
 interface StringDict {
     [Key: string]: string;
