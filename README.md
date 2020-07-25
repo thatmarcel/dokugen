@@ -2,10 +2,10 @@
 **Easy and fast API documentation website generator & server written in [Deno](https://deno.land)**
 
 ## Running
-1. Install Deno ([instructions](https://deno.land))
+1. Install Deno ([instructions](https://deno.land)) and make sure you are using the newest version
 2. Create 2 folders, one called **routes** and one called **meta**
 3. Create a new file in **meta**, name it **site-name** and type the title of your API docs
-4. Run `deno run --allow-read --allow-net --unstable --reload=https://src.dokugen.co https://src.dokugen.co/dokugen.ts`
+4. Run `deno run --allow-read --allow-net --unstable --reload https://src.dokugen.co/dokugen.ts`
 5. Access the server at port 8000 or the value of the PORT environment variable if set
 
 **Alternatively, you can run dokugen with the following one-liner. This script installs Deno if needed, creates the 2 folders and then starts dokugen.**
