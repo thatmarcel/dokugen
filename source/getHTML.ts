@@ -9,6 +9,10 @@ class HTMLCache {
 }
 
 export default async (path: string): Promise<string> => {
+    if (exists("./source/" + path)) {
+        return await Deno.readTextFile("./source/" + path);
+    }
+
     if (HTMLCache.dict[path]) {
         return HTMLCache.dict[path];
     }
