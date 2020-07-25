@@ -1,4 +1,3 @@
-import { readFileStr } from "https://deno.land/std/fs/mod.ts";
 import Route from "./models/Route.ts";
 
 interface Dictionary<T> {
@@ -6,7 +5,7 @@ interface Dictionary<T> {
 }
 
 export default async (filePath: string) => {
-    const file = await readFileStr(filePath);
+    const file = await Deno.readTextFile(filePath);
 
     const multilineAttributeNames: string[] = [
         "ExampleResponse",

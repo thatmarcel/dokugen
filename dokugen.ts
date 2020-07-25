@@ -1,4 +1,4 @@
-import { serve } from "https://deno.land/std@0.58.0/http/server.ts";
+import { serve } from "https://deno.land/std/http/server.ts";
 import { config } from "https://deno.land/x/dotenv/mod.ts";
 import handleRequest from "./source/handleRequest.ts";
 

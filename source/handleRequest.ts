@@ -1,4 +1,4 @@
-import { ServerRequest } from "https://deno.land/std@0.58.0/http/server.ts";
+import { ServerRequest } from "https://deno.land/std/http/server.ts";
 import { exists } from "https://deno.land/std/fs/mod.ts";
 import errorResponse from "./errorResponse.ts";
 import indexResponse from "./indexResponse.ts";

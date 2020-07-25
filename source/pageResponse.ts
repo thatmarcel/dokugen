@@ -1,6 +1,5 @@
-import { readFileStr } from "https://deno.land/std/fs/mod.ts";
 import wrap from "./wrap.ts";
-import { Response } from "https://deno.land/std@0.58.0/http/server.ts";
+import { Response } from "https://deno.land/std/http/server.ts";
 import Route from "./models/Route.ts";
 
 interface StringDict {
@@ -8,9 +7,9 @@ interface StringDict {
 }
 
 export default async (page: string, route: Route): Promise<Response> => {
-    const siteName = await readFileStr("./meta/site-name");
-    let pageHTML = await readFileStr("./source/pages/" + page + ".html");
-    const paramItemHTML = await readFileStr("./source/elements/paramItem.html");
+    const siteName = await Deno.readTextFile("./meta/site-name");
+    let pageHTML = await Deno.readTextFile("./source/pages/" + page + ".html");
+    const paramItemHTML = await Deno.readTextFile("./source/elements/paramItem.html");
 
     pageHTML = pageHTML.replaceAll("{path}", route.path || "");
     pageHTML = pageHTML.replaceAll("{hostname}", route.hostname || "");

@@ -1,13 +1,12 @@
-import { readFileStr } from "https://deno.land/std/fs/mod.ts";
 import wrap from "./wrap.ts";
-import { Response } from "https://deno.land/std@0.58.0/http/server.ts";
+import { Response } from "https://deno.land/std/http/server.ts";
 import scanRoutes from "./scanRoutes.ts";
 
 export default async (page: string): Promise<Response> => {
-    const siteName = await readFileStr("./meta/site-name");
-    const pageHTML = await wrap(await readFileStr("./source/pages/index.html"), siteName + " API docs (via dokugen)");
-    const endpointGroupHTML = await readFileStr("./source/elements/endpointGroup.html");
-    const endpointHTML = await readFileStr("./source/elements/endpoint.html");
+    const siteName = await Deno.readTextFile("./meta/site-name");
+    const pageHTML = await wrap(await Deno.readTextFile("./source/pages/index.html"), siteName + " API docs (via dokugen)");
+    const endpointGroupHTML = await Deno.readTextFile("./source/elements/endpointGroup.html");
+    const endpointHTML = await Deno.readTextFile("./source/elements/endpoint.html");
 
     const endpointGroups = await scanRoutes();
 
