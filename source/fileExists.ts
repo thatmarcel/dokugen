@@ -3,10 +3,10 @@ export default async (path: string): Promise<boolean> => {
         await Deno.stat(path);
         return true;
     } catch (error) {
-        if (error && error.kind === Deno.ErrorKind.NotFound) {
-            return false;
-        } else if (error) {
+        if (error && !error.kind === Deno.ErrorKind.NotFound) {
             throw error;
         }
     }
+
+    return false;
 };
