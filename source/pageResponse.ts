@@ -1,4 +1,5 @@
 import wrap from "./wrap.ts";
+import getHTML from "./getHTML.ts";
 import { Response } from "https://deno.land/std/http/server.ts";
 import Route from "./models/Route.ts";
 
@@ -8,8 +9,8 @@ interface StringDict {
 
 export default async (page: string, route: Route): Promise<Response> => {
     const siteName = await Deno.readTextFile("./meta/site-name");
-    let pageHTML = await Deno.readTextFile("./source/pages/" + page + ".html");
-    const paramItemHTML = await Deno.readTextFile("./source/elements/paramItem.html");
+    let pageHTML = await getHTML("pages/" + page + ".html");
+    const paramItemHTML = await getHTML("elements/paramItem.html");
 
     pageHTML = pageHTML.replaceAll("{path}", route.path || "");
     pageHTML = pageHTML.replaceAll("{hostname}", route.hostname || "");

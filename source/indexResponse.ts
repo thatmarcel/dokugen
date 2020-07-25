@@ -1,12 +1,13 @@
 import wrap from "./wrap.ts";
+import getHTML from "./getHTML.ts";
 import { Response } from "https://deno.land/std/http/server.ts";
 import scanRoutes from "./scanRoutes.ts";
 
 export default async (page: string): Promise<Response> => {
     const siteName = await Deno.readTextFile("./meta/site-name");
-    const pageHTML = await wrap(await Deno.readTextFile("./source/pages/index.html"), siteName + " API docs (via dokugen)");
-    const endpointGroupHTML = await Deno.readTextFile("./source/elements/endpointGroup.html");
-    const endpointHTML = await Deno.readTextFile("./source/elements/endpoint.html");
+    const pageHTML = await wrap(await getHTML("pages/index.html"), siteName + " API docs (via dokugen)");
+    const endpointGroupHTML = await getHTML("elements/endpointGroup.html");
+    const endpointHTML = await getHTML("elements/endpoint.html");
 
     const endpointGroups = await scanRoutes();
 
