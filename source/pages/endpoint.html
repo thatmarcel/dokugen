@@ -1,0 +1,39 @@
+<div class="absolute inset-0 flex justify-center px-16 md:pt-32 pt-20">
+    <div class="relative w-full md:w-auto" style="max-width: 1000px">
+        <div class="mb-16 md:mb-32">
+            <div class="px-8 pb-4 pt-2 bg-gray-200" style="border-radius: 32px">
+                <h1 class="text-center text-4xl md:text-5xl font-bold break-all">{path}</h1>
+            </div>
+            <h2 class="text-center text-lg md:text-xl text-gray-600 mt-2">
+                {hostname}
+            </h2>
+        </div>
+        <p class="text-xl">
+            {description}
+        </p>
+        <div class="block relative flex mt-8">
+            <span class="font-bold text-2xl">Method</span>
+            <span class="font-bold px-3 py-1 bg-green-400 text-green-800 rounded-lg ml-4 text-lg m-auto">{method}</span>
+        </div>
+        <span class="{exampleResponseVisibility} relative font-bold text-2xl mt-4 text-black">Example response</span>
+        <pre class="{exampleResponseVisibility} mt-2 bg-gray-200 py-2 px-4 rounded-lg"><code>{exampleResponse}</code></pre>
+
+        <span class="{queryParamsVisibility} relative font-bold text-2xl mt-8 text-black">Query parameters</span>
+        <ul class="{queryParamsVisibility} mt-2 text-xl list-inside list-disc">
+            {queryParams}
+        </ul>
+
+        <span class="{bodyParamsVisibility} relative font-bold text-2xl mt-8 text-black">Body parameters</span>
+        <ul class="{bodyParamsVisibility} mt-2 text-xl list-inside list-disc">
+            {bodyParams}
+        </ul>
+        <div class="pb-8"></div>
+    </div>
+</div>
+
+<div class="absolute l-0 t-0 pt-4 pl-4">
+    <a href="/" class="text-lg font-bold text-gray-600">
+        <img class="w-6 h-6 mb-1 inline" src="https://ucarecdn.com/828213b9-2019-4c98-b854-1363ad225f2a/" />
+        Back to home
+    </a>
+</div>

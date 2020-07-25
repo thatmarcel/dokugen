@@ -1,0 +1,17 @@
+Method: POST
+QueryParams:
+- q: The search query
+BodyParams:
+- limit: The maximum number of results that should be returned
+- format: The format the results should be returned in. One of 'json' or 'xml'
+ExampleResponse:
+{
+    items: [{
+        "item1",
+        "item2"
+    }]
+}
+---
+Description:
+Search for an item in the database
+---
