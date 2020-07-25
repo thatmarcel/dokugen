@@ -2,7 +2,7 @@
 **Easy and fast API documentation website generator & server written in [Deno](https://deno.land)**
 
 ## Running
-1. Install Deno ([instructions](https://deno.land))
+1. Install Deno ([instructions](https://deno.land/#installation))
 2. Clone the repository and go into that folder
 3. Run `deno run --allow-read --allow-net --unstable dokugen.ts`
 4. Access the server at port 8000 or the value of the PORT environment variable if set
