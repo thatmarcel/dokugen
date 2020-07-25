@@ -8,6 +8,9 @@
 4. Run `deno run --allow-read --allow-net --unstable --reload=https://src.dokugen.co https://src.dokugen.co/dokugen.ts`
 5. Access the server at port 8000 or the value of the PORT environment variable if set
 
+Alternatively, you can run dokugen with the following one-liner. This script installs Deno if needed and then starts it.
+```curl -fsSL https://run.dokugen.co | sh```
+
 ## Defining API endpoints
 API endpoints are defined in the **routes** folder.
 Take a look at the contents of that folder to understand the folder structure and file definition format.
