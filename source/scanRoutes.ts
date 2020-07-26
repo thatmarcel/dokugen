@@ -10,6 +10,8 @@ export default async (): Promise<EndpointGroup[]> => {
         entry.isFile && routes.push(await parseRoute(entry.path));
     }
 
+    routes.sort((a, b) => ((a?.path || "") < (b?.path || "")) && -1 || 1);
+
     let endpointGroups: EndpointGroup[] = [];
 
     outer:
