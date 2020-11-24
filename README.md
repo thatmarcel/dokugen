@@ -16,4 +16,4 @@
 
 ## Defining API endpoints
 API endpoints are defined in the **routes** folder.
-Take a look at the contents of that folder to understand the folder structure and file definition format.
+Take a look at the contents of that folder in this repo to understand the folder structure and file definition format.
