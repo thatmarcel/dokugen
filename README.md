@@ -1,6 +1,8 @@
 # dokugen
 **Easy and fast API documentation website generator & server written in [Deno](https://deno.land)**
 
+**[Example](https://api-docs.igottech.news)**
+
 ## Running
 1. Install Deno ([instructions](https://deno.land)) and make sure you are using the newest version
 2. Create 2 folders, one called **routes** and one called **meta**
